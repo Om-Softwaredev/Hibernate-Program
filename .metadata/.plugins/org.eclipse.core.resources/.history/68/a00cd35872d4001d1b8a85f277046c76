@@ -1,0 +1,8 @@
+package in.ineuron.model;
+
+public class Student {
+	private Integer sid;
+	private String sname;
+	private String saddress;
+	private Integer sage;
+}
