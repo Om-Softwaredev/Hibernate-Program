@@ -24,7 +24,7 @@
 		<!-- Inform HIBERNATE to create/alter/drop the table -->
 		<property name="hibernate.hbm2ddl.auto">create</property>
 
-
+		<!-- MAPPING INGFORMATION FOR HIBERNATE(CLASSNAME-TABLENAME),(FIELDNAME->COLUMNAMES) -->
 		<mapping class="in.ineuron.model.Student" />
 	</session-factory>
 

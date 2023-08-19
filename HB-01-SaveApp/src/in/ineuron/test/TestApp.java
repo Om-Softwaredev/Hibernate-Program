@@ -1,7 +1,5 @@
 package in.ineuron.test;
 
-import java.io.IOException;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -11,7 +9,7 @@ import in.ineuron.model.Student;
 
 public class TestApp {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 
 		// 1. Inform JVM to activate HIBERNATE
 		Configuration configuration = new Configuration();
@@ -37,11 +35,14 @@ public class TestApp {
 		// 3. Perform PERISTENCE operation using Entity/Model/POJO object
 		session.save(student);
 
+		System.in.read();
 		// 4. commit the operation based on the result
 		transaction.commit();
 
 		System.out.println("Object saved to database....");
 
-	}
+		session.close();
+		sessionFactory.close();
 
+	}
 }
