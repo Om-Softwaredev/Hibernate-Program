@@ -33,9 +33,9 @@ public class PersistApp {
 			}
 
 		} catch (HibernateException e) {
-
+			e.printStackTrace();
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		} finally {
 			if (flag) {
 				transaction.commit();
